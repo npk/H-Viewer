@@ -4,8 +4,10 @@ import ml.puredark.hviewer.dataproviders.AbstractDataProvider
 
 class Tag(
         var tid: Int,
-        var title: String)
-: AbstractDataProvider.Data() {
+        var title: String
+) : AbstractDataProvider.Data() {
+
     override val id: Int
         get() = tid
+
 }

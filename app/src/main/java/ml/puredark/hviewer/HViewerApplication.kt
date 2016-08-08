@@ -32,7 +32,6 @@ class HViewerApplication : Application() {
         var mContext: Context? = null
         // 全局变量，用于跨Activity传输复杂对象
         var temp: Any? = null
-
         //服务器地址
         var serverHost = ""
 

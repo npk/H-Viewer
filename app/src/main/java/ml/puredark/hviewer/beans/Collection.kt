@@ -1,7 +1,5 @@
 package ml.puredark.hviewer.beans
 
-import java.lang.reflect.Field
-
 import ml.puredark.hviewer.dataproviders.AbstractDataProvider
 
 open class Collection(
@@ -11,8 +9,9 @@ open class Collection(
         var cover: String,
         var description: String,
         var datetime: String,
-        var type: Int)
-: AbstractDataProvider.Data() {
+        var type: Int
+) : AbstractDataProvider.Data() {
+
     override val id: Int
         get() = cid
 
