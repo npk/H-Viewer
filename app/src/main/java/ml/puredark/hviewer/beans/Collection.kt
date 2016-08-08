@@ -13,8 +13,8 @@ open class Collection(
         var datetime: String,
         var type: Int)
 : AbstractDataProvider.Data() {
-
-    override fun getId(): Int = cid
+    override val id: Int
+        get() = cid
 
     override fun equals(other: Any?): Boolean {
         if (other is Collection) {

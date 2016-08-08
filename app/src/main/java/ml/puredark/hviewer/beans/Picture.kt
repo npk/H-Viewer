@@ -6,5 +6,6 @@ class Picture(
         var pid: Int,
         var url: String
 ) : AbstractDataProvider.Data() {
-    override fun getId(): Int = pid
+    override val id: Int
+        get() = pid
 }

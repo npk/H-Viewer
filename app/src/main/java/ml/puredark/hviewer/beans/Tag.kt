@@ -6,5 +6,6 @@ class Tag(
         var tid: Int,
         var title: String)
 : AbstractDataProvider.Data() {
-    override fun getId(): Int = tid
+    override val id: Int
+        get() = tid
 }
