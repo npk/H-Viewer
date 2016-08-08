@@ -1,4 +1,5 @@
 package ml.puredark.hviewer.helpers;
+
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;

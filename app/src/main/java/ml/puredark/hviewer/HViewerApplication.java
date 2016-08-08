@@ -45,10 +45,9 @@ public class HViewerApplication extends Application {
     }
 
 
-    public static String getVersionName() throws Exception
-    {
+    public static String getVersionName() throws Exception {
         PackageManager packageManager = mContext.getPackageManager();
-        PackageInfo packInfo = packageManager.getPackageInfo(mContext.getPackageName(),0);
+        PackageInfo packInfo = packageManager.getPackageInfo(mContext.getPackageName(), 0);
         String version = packInfo.versionName;
         return version;
     }
@@ -68,9 +67,9 @@ public class HViewerApplication extends Application {
         return false;
     }
 
-    public static void loadImageFromUrl(ImageView imageView, String url){
+    public static void loadImageFromUrl(ImageView imageView, String url) {
         imageView.setImageBitmap(null);
-        if(url!=null) {
+        if (url != null) {
             Glide.with(mContext).load(url).into(imageView);
         }
     }
@@ -81,7 +80,7 @@ public class HViewerApplication extends Application {
     }
 
     public static void addHistory(Collection item) {
-        if(item==null)return;
+        if (item == null) return;
         deleteHistory(item);
         histories.add(0, item);
         trimHistory();
@@ -89,8 +88,8 @@ public class HViewerApplication extends Application {
     }
 
     public static void deleteHistory(Collection item) {
-        for(int i=0,size=histories.size();i<size;i++){
-            if(histories.get(i).equals(item)){
+        for (int i = 0, size = histories.size(); i < size; i++) {
+            if (histories.get(i).equals(item)) {
                 histories.remove(i);
                 size--;
                 i--;
@@ -107,7 +106,7 @@ public class HViewerApplication extends Application {
     }
 
     public static void trimHistory() {
-        while(histories.size()>20)
+        while (histories.size() > 20)
             histories.remove(20);
     }
 
@@ -116,15 +115,15 @@ public class HViewerApplication extends Application {
     }
 
     public static void addFavourite(Collection item) {
-        if(item==null)return;
+        if (item == null) return;
         deleteFavourite(item);
         favourites.add(0, item);
         saveFavourite();
     }
 
     public static void deleteFavourite(Collection item) {
-        for(int i=0,size=favourites.size();i<size;i++){
-            if(favourites.get(i).equals(item)){
+        for (int i = 0, size = favourites.size(); i < size; i++) {
+            if (favourites.get(i).equals(item)) {
                 favourites.remove(i);
                 size--;
                 i--;
@@ -134,15 +133,15 @@ public class HViewerApplication extends Application {
     }
 
     public static List<Collection> getFavourite() {
-        if(favourites==null)
+        if (favourites == null)
             return new ArrayList<>();
         else
             return favourites;
     }
 
     public static boolean isFavourite(Collection item) {
-        for(int i=0,size=favourites.size();i<size;i++){
-            if(favourites.get(i).equals(item))
+        for (int i = 0, size = favourites.size(); i < size; i++) {
+            if (favourites.get(i).equals(item))
                 return true;
         }
         return false;

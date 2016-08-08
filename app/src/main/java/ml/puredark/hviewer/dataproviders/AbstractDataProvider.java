@@ -17,9 +17,11 @@ public abstract class AbstractDataProvider {
     public abstract Data getItem(int index);
 
     public abstract void removeItem(int position);
+
     public abstract void clear();
 
     public abstract void addItem(Data item);
+
     public abstract void addItem(int position, Data item);
 
     public abstract void addAll(Collection items);
