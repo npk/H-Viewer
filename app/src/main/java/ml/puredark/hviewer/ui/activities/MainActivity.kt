@@ -12,13 +12,16 @@ class MainActivity : AppCompatActivity(), GalleryView {
     val presenter by lazy { GalleryPresenter(this) }
 
     override fun onFetchCovers(covers: List<AlbumCover>) {
-        var label = findViewById(R.id.label1) as TextView;
-        label.text = covers.count().toString()
+        runOnUiThread {
+            var label = findViewById(R.id.label1) as TextView;
+            label.text = covers.count().toString()
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        presenter.fetch();
     }
 
 }
