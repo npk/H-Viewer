@@ -4,13 +4,12 @@ import ml.puredark.hviewer.data.parsers.BaseParser
 import okhttp3.*
 import java.io.IOException
 
-open class BaseFetcher<TCollection>(callback: (result: TCollection?) -> Unit) {
+open class BaseFetcher<TCollection>() {
 
     val client by lazy { OkHttpClient() }
-    val callback by lazy { callback }
     val parser: BaseParser<TCollection>? = null
 
-    protected fun fetch(url: String) {
+    protected fun fetch(url: String, callback: (result: TCollection?) -> Unit) {
         val request = Request.Builder().url(url).build()
 
         client.newCall(request).enqueue(object: Callback {
