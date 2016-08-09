@@ -4,20 +4,14 @@ package ml.puredark.hviewer
 import android.annotation.TargetApi
 import android.app.Application
 import android.content.Context
-import android.content.pm.PackageInfo
-import android.content.pm.PackageManager
-import android.graphics.Bitmap
 import android.net.ConnectivityManager
 import android.os.Build
 import android.support.v7.app.AppCompatDelegate
 import android.widget.ImageView
-
 import com.bumptech.glide.Glide
 import com.google.gson.Gson
-
-import java.util.ArrayList
-
 import ml.puredark.hviewer.utils.SharedPreferencesUtil
+import java.util.*
 
 class HViewerApplication : Application() {
 
@@ -32,7 +26,7 @@ class HViewerApplication : Application() {
         var mContext: Context? = null
         // 全局变量，用于跨Activity传输复杂对象
         var temp: Any? = null
-        //服务器地址
+        // 服务器地址
         var serverHost = ""
 
         var histories: MutableList<Collection<Any>>? = null

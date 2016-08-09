@@ -1,13 +1,6 @@
 package ml.puredark.hviewer.beans
 
-import ml.puredark.hviewer.dataproviders.AbstractDataProvider
-
-class Tag(
-        var tid: Int,
+data class Tag(
+        var id: Int,
         var title: String
-) : AbstractDataProvider.Data() {
-
-    override val id: Int
-        get() = tid
-
-}
+)
