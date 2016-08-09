@@ -1,4 +1,4 @@
-package ml.puredark.hviewer.data.parser
+package ml.puredark.hviewer.data.parsers
 
 import org.jsoup.Jsoup
 
