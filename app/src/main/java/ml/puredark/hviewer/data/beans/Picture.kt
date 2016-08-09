@@ -1,4 +1,4 @@
-package ml.puredark.hviewer.beans
+package ml.puredark.hviewer.data.beans
 
 data class Picture(
         var id: Int,
